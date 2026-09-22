@@ -1,0 +1,10 @@
+# Versions actually used for validation, Linux/Python 3.12.
+# Install CPU torch using its official CPU index before installing the rest.
+numpy==2.5.3
+scipy==1.18.1
+ruptures==1.1.10
+httpx==0.28.1
+matplotlib==3.10.8
+changeforest==1.2.1
+torch==2.14.0+cpu
+pytest==9.1.1

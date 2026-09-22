@@ -1,0 +1,14 @@
+{
+  "mode": "spec",
+  "bank": ["pelt", "bottom_up", "window", "changeforest_rf", "changeforest_knn", "bayesian_offline", "spectral", "klcpd"],
+  "agent": {"k": 3, "iterations": 8, "epsilon": 0.005, "vision": false, "repairs": 1},
+  "llm": {
+    "model": "openai/gpt-4o",
+    "temperature": 0.2,
+    "max_tokens": 6000,
+    "max_requests": 60,
+    "provider": {"allow_fallbacks": false},
+    "max_cost_usd": null
+  },
+  "execution": {"timeout_seconds": 300}
+}

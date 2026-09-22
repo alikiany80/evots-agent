@@ -1,0 +1,13 @@
+{
+  "mode": "python",
+  "bank": ["pelt", "bottom_up", "window", "changeforest_rf", "changeforest_knn", "bayesian_offline", "spectral", "klcpd"],
+  "agent": {"k": 3, "iterations": 8, "epsilon": 0.005, "vision": true, "repairs": 2},
+  "llm": {
+    "model": "openai/gpt-4o",
+    "temperature": 0.2,
+    "max_tokens": 8000,
+    "max_requests": 90,
+    "provider": {"allow_fallbacks": false}
+  },
+  "execution": {"timeout_seconds": 300, "image": "evots-worker:local", "memory": "3g", "cpus": 2}
+}
