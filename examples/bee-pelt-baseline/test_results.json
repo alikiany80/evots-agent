@@ -1,0 +1,224 @@
+{
+  "candidate_sha256": "e2f2b5bf652c1652f402e7e72aa3f7e3e3257c9ea37defa76dbcee19a9822965",
+  "mock": false,
+  "execution": {
+    "ok": true,
+    "predictions": [
+      [
+        25,
+        55,
+        70,
+        119,
+        173
+      ],
+      [
+        23,
+        40,
+        68,
+        78,
+        121,
+        146,
+        167,
+        183
+      ],
+      [
+        15,
+        43,
+        60,
+        83,
+        93,
+        111
+      ],
+      [
+        29,
+        46,
+        59,
+        77,
+        96,
+        128,
+        140
+      ],
+      [
+        12,
+        31,
+        44,
+        64,
+        77,
+        95,
+        112,
+        123,
+        137
+      ],
+      [
+        21,
+        41,
+        71,
+        104
+      ]
+    ],
+    "log": "",
+    "seconds": 1.0205354090001038
+  },
+  "scores": {
+    "aggregate": {
+      "f1": 0.56005291005291,
+      "precision": 0.4542989417989418,
+      "recall": 0.75,
+      "hausdorff_infinite": false,
+      "hausdorff": 23.166666666666668,
+      "n_sequences": 6
+    },
+    "per_series": [
+      {
+        "name": "beedance-1",
+        "f1": 0.22222222222222224,
+        "precision": 0.2,
+        "recall": 0.25,
+        "hausdorff": 24.0,
+        "hausdorff_infinite": false,
+        "tp": 1,
+        "fp": 4,
+        "fn": 3,
+        "matches": [
+          [
+            46,
+            55
+          ]
+        ]
+      },
+      {
+        "name": "beedance-2",
+        "f1": 0.5,
+        "precision": 0.375,
+        "recall": 0.75,
+        "hausdorff": 25.0,
+        "hausdorff_infinite": false,
+        "tp": 3,
+        "fp": 5,
+        "fn": 1,
+        "matches": [
+          [
+            43,
+            40
+          ],
+          [
+            87,
+            78
+          ],
+          [
+            146,
+            146
+          ]
+        ]
+      },
+      {
+        "name": "beedance-3",
+        "f1": 0.8,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "hausdorff": 27.0,
+        "hausdorff_infinite": false,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "matches": [
+          [
+            15,
+            15
+          ],
+          [
+            70,
+            60
+          ],
+          [
+            87,
+            83
+          ],
+          [
+            103,
+            93
+          ]
+        ]
+      },
+      {
+        "name": "beedance-4",
+        "f1": 0.6,
+        "precision": 0.42857142857142855,
+        "recall": 1.0,
+        "hausdorff": 20.0,
+        "hausdorff_infinite": false,
+        "tp": 3,
+        "fp": 4,
+        "fn": 0,
+        "matches": [
+          [
+            37,
+            29
+          ],
+          [
+            79,
+            77
+          ],
+          [
+            123,
+            128
+          ]
+        ]
+      },
+      {
+        "name": "beedance-5",
+        "f1": 0.6666666666666667,
+        "precision": 0.5555555555555556,
+        "recall": 0.8333333333333334,
+        "hausdorff": 16.0,
+        "hausdorff_infinite": false,
+        "tp": 5,
+        "fp": 4,
+        "fn": 1,
+        "matches": [
+          [
+            4,
+            12
+          ],
+          [
+            60,
+            64
+          ],
+          [
+            79,
+            77
+          ],
+          [
+            116,
+            112
+          ],
+          [
+            132,
+            123
+          ]
+        ]
+      },
+      {
+        "name": "beedance-6",
+        "f1": 0.5714285714285715,
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "hausdorff": 27.0,
+        "hausdorff_infinite": false,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1,
+        "matches": [
+          [
+            46,
+            41
+          ],
+          [
+            77,
+            71
+          ]
+        ]
+      }
+    ]
+  }
+}

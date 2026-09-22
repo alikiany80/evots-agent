@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "metadata": {
+    "split": "train",
+    "ratios": [
+      0.6,
+      0.2,
+      0.2
+    ]
+  },
+  "series": [
+    {
+      "name": "mean_variance_0",
+      "file": "series_0000.npz",
+      "sha256": "2a85a64b48c9434b4381197007e6ee45a23d2bf03bbb59fcc98bf8b6d88a885c"
+    },
+    {
+      "name": "mean_variance_1",
+      "file": "series_0001.npz",
+      "sha256": "95a7767fa633c742e2a8d3e132e2ad6c8e72abb78601f314afc6163a97196a94"
+    }
+  ]
+}

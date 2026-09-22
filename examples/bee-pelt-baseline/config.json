@@ -1,0 +1,44 @@
+{
+  "seed": 42,
+  "tolerance": 10,
+  "mode": "spec",
+  "mock": false,
+  "bank": [
+    "pelt",
+    "bottom_up",
+    "window",
+    "spectral"
+  ],
+  "agent": {
+    "k": 2,
+    "iterations": 4,
+    "epsilon": 0.005,
+    "alternative": true,
+    "recombination": true,
+    "eda": true,
+    "vision": false,
+    "repairs": 0
+  },
+  "llm": {
+    "model": "openai/gpt-4o",
+    "temperature": 0.2,
+    "max_tokens": 6000,
+    "send_seed": false,
+    "json_mode": true,
+    "reasoning": null,
+    "provider": {
+      "allow_fallbacks": false
+    },
+    "timeout_seconds": 120,
+    "retries": 2,
+    "max_retry_wait_seconds": 60,
+    "max_requests": 60,
+    "max_cost_usd": null
+  },
+  "execution": {
+    "timeout_seconds": 60,
+    "image": "evots-worker:local",
+    "memory": "2g",
+    "cpus": 2
+  }
+}

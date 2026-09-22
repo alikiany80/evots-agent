@@ -1,0 +1,306 @@
+{
+  "id": 6,
+  "stage": "optimization",
+  "operator": "alternative",
+  "parents": [
+    0,
+    5
+  ],
+  "consumes": 5,
+  "model": "window",
+  "candidate": {
+    "model": "window",
+    "summary": "MOCK: alternative",
+    "pipeline": {
+      "model": "window",
+      "penalty": 12.0,
+      "representation": "raw_squared"
+    },
+    "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'window', 'penalty': 12.0, 'representation': 'raw_squared'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+  },
+  "q": 1.0,
+  "metrics": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "hausdorff_infinite": false,
+    "hausdorff": 0.5,
+    "n_sequences": 2
+  },
+  "accepted": false,
+  "stagnant": false,
+  "code_diff": "--- parent.py\n+++ candidate.py\n@@ -1,5 +1,5 @@\n from evots.bank import detect as bank_detect\n-SPEC = {'model': 'pelt'}\n+SPEC = {'model': 'window', 'penalty': 12.0, 'representation': 'raw_squared'}\n \n def detect(train, x, seed):\n     return bank_detect(train, x, SPEC, seed)\n",
+  "log": "",
+  "attempts": [
+    {
+      "candidate": {
+        "model": "window",
+        "summary": "MOCK: alternative",
+        "pipeline": {
+          "model": "window",
+          "penalty": 12.0,
+          "representation": "raw_squared"
+        },
+        "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'window', 'penalty': 12.0, 'representation': 'raw_squared'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+      },
+      "execution": {
+        "ok": true,
+        "predictions": [
+          [
+            100,
+            199
+          ],
+          [
+            100,
+            200
+          ]
+        ],
+        "log": "",
+        "seconds": 0.8184645599999385
+      }
+    }
+  ],
+  "validation_details": {
+    "aggregate": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "hausdorff_infinite": false,
+      "hausdorff": 0.5,
+      "n_sequences": 2
+    },
+    "per_series": [
+      {
+        "name": "mean_variance_0",
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "hausdorff": 1.0,
+        "hausdorff_infinite": false,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          [
+            100,
+            100
+          ],
+          [
+            200,
+            199
+          ]
+        ]
+      },
+      {
+        "name": "mean_variance_1",
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "hausdorff": 0.0,
+        "hausdorff_infinite": false,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          [
+            100,
+            100
+          ],
+          [
+            200,
+            200
+          ]
+        ]
+      }
+    ]
+  },
+  "context": {
+    "operator": "alternative",
+    "required_model": null,
+    "selection": {
+      "primary": [
+        "pelt",
+        "bottom_up"
+      ],
+      "alternatives": [
+        "window",
+        "spectral"
+      ],
+      "summary": "MOCK: fixed ordering; no LLM inference"
+    },
+    "eda": {
+      "sample_id": "mean_variance_0",
+      "source_split": "train",
+      "sample_index": 0,
+      "n_series": 2,
+      "features": {
+        "length": 900,
+        "dimensions": 1,
+        "missing_ratio": 0.0,
+        "window": 25,
+        "lag1_autocorrelation": [
+          0.7755960613167714
+        ],
+        "trend_strength": [
+          7.93845406937832e-05
+        ],
+        "spectral_concentration": [
+          0.3020817253668436
+        ],
+        "dominant_period_samples": [
+          225.0
+        ],
+        "local_mean_discrepancy_max": [
+          2.0648250535844803
+        ],
+        "local_std_discrepancy_max": [
+          0.9299384276406177
+        ],
+        "nonstationarity_proxy": [
+          0.016252863427855934
+        ]
+      }
+    },
+    "parents": [
+      {
+        "id": 0,
+        "operator": "initial",
+        "model": "pelt",
+        "candidate": {
+          "model": "pelt",
+          "summary": "MOCK: initial",
+          "pipeline": {
+            "model": "pelt"
+          },
+          "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+        },
+        "q": 1.0,
+        "metrics": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "hausdorff_infinite": false,
+          "hausdorff": 0.0,
+          "n_sequences": 2
+        },
+        "stagnant": false,
+        "accepted": true,
+        "log": ""
+      },
+      {
+        "id": 5,
+        "operator": "revision",
+        "model": "pelt",
+        "candidate": {
+          "model": "pelt",
+          "summary": "MOCK: revision",
+          "pipeline": {
+            "model": "pelt",
+            "penalty": 11.2
+          },
+          "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt', 'penalty': 11.2}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+        },
+        "q": 1.0,
+        "metrics": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "hausdorff_infinite": false,
+          "hausdorff": 0.0,
+          "n_sequences": 2
+        },
+        "stagnant": true,
+        "accepted": false,
+        "log": ""
+      }
+    ],
+    "recent_relevant": [
+      {
+        "id": 0,
+        "operator": "initial",
+        "model": "pelt",
+        "candidate": {
+          "model": "pelt",
+          "summary": "MOCK: initial",
+          "pipeline": {
+            "model": "pelt"
+          },
+          "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+        },
+        "q": 1.0,
+        "metrics": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "hausdorff_infinite": false,
+          "hausdorff": 0.0,
+          "n_sequences": 2
+        },
+        "stagnant": false,
+        "accepted": true,
+        "log": ""
+      },
+      {
+        "id": 1,
+        "operator": "revision",
+        "model": "pelt",
+        "candidate": {
+          "model": "pelt",
+          "summary": "MOCK: revision",
+          "pipeline": {
+            "model": "pelt",
+            "penalty": 11.2
+          },
+          "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt', 'penalty': 11.2}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+        },
+        "q": 1.0,
+        "metrics": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "hausdorff_infinite": false,
+          "hausdorff": 0.0,
+          "n_sequences": 2
+        },
+        "stagnant": true,
+        "accepted": false,
+        "log": ""
+      },
+      {
+        "id": 5,
+        "operator": "revision",
+        "model": "pelt",
+        "candidate": {
+          "model": "pelt",
+          "summary": "MOCK: revision",
+          "pipeline": {
+            "model": "pelt",
+            "penalty": 11.2
+          },
+          "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt', 'penalty': 11.2}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+        },
+        "q": 1.0,
+        "metrics": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "hausdorff_infinite": false,
+          "hausdorff": 0.0,
+          "n_sequences": 2
+        },
+        "stagnant": true,
+        "accepted": false,
+        "log": ""
+      }
+    ],
+    "attempted_families": [
+      "bottom_up",
+      "pelt",
+      "window"
+    ],
+    "trial": 6,
+    "total_trials": 8,
+    "primary_metric": "macro boundary F1 on validation",
+    "tolerance": 10
+  }
+}

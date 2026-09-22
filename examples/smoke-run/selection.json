@@ -1,0 +1,11 @@
+{
+  "primary": [
+    "pelt",
+    "bottom_up"
+  ],
+  "alternatives": [
+    "window",
+    "spectral"
+  ],
+  "summary": "MOCK: fixed ordering; no LLM inference"
+}

@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "best_trial": 0,
+  "validation_f1": 0.43653198653198655,
+  "trials": 1,
+  "valid_trials": 1,
+  "trial_success_rate": 1.0,
+  "mock": false
+}

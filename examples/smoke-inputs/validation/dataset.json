@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "metadata": {
+    "split": "validation",
+    "ratios": [
+      0.6,
+      0.2,
+      0.2
+    ]
+  },
+  "series": [
+    {
+      "name": "mean_variance_0",
+      "file": "series_0000.npz",
+      "sha256": "0e082699185dff2f15cabfa72efed8447e64037b9ddfa893cf283edadc18140e"
+    },
+    {
+      "name": "mean_variance_1",
+      "file": "series_0001.npz",
+      "sha256": "b9e56d0994410de22e3ff012ee553f86a10d81827547b1aee19e4a89223b09e9"
+    }
+  ]
+}

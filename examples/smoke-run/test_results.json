@@ -1,0 +1,73 @@
+{
+  "candidate_sha256": "cbc78b060cd2cc88351542898decb8575c80e909ac782fd5bb78cb24793622a1",
+  "mock": true,
+  "execution": {
+    "ok": true,
+    "predictions": [
+      [
+        100,
+        200
+      ],
+      [
+        100,
+        200
+      ]
+    ],
+    "log": "",
+    "seconds": 1.1266008389998206
+  },
+  "scores": {
+    "aggregate": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "hausdorff_infinite": false,
+      "hausdorff": 0.0,
+      "n_sequences": 2
+    },
+    "per_series": [
+      {
+        "name": "mean_variance_0",
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "hausdorff": 0.0,
+        "hausdorff_infinite": false,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          [
+            100,
+            100
+          ],
+          [
+            200,
+            200
+          ]
+        ]
+      },
+      {
+        "name": "mean_variance_1",
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "hausdorff": 0.0,
+        "hausdorff_infinite": false,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "matches": [
+          [
+            100,
+            100
+          ],
+          [
+            200,
+            200
+          ]
+        ]
+      }
+    ]
+  }
+}

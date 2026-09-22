@@ -1,0 +1,54 @@
+{
+  "identity": {
+    "config": {
+      "seed": 42,
+      "tolerance": 10,
+      "mode": "spec",
+      "mock": false,
+      "bank": [
+        "pelt",
+        "bottom_up",
+        "window",
+        "spectral"
+      ],
+      "agent": {
+        "k": 2,
+        "iterations": 4,
+        "epsilon": 0.005,
+        "alternative": true,
+        "recombination": true,
+        "eda": true,
+        "vision": false,
+        "repairs": 0
+      },
+      "llm": {
+        "model": "openai/gpt-4o",
+        "temperature": 0.2,
+        "max_tokens": 6000,
+        "send_seed": false,
+        "json_mode": true,
+        "reasoning": null,
+        "provider": {
+          "allow_fallbacks": false
+        }
+      },
+      "execution": {
+        "timeout_seconds": 60,
+        "image": "evots-worker:local",
+        "memory": "2g",
+        "cpus": 2
+      }
+    },
+    "inputs": {
+      "train": "7b6ed703081ea620538ca2c5cd40da92a77daf29b79b3407eac48130080b01a1",
+      "validation": "cdaf0dc7fadb4992996af682cdf9b89d35afd503f011b203452ea9284a645ecc",
+      "test": "5f17c44e313a13ca104aad7a8ab738195a1ef3e36d6c58283f639bbb3ddc2765"
+    },
+    "protocol": "3d39b8e49c92aa11101565207d3dca86e94ec51709e887d74e47e03f7a31d9a9",
+    "source_sha256": "15f889f6e3d2aa357cc5b72b9ba4a87d12c7f9f0e0d8330014d60736284cf60e"
+  },
+  "prepared": "/workspace/scratch/daa5fe012320/research/bee-prepared",
+  "baseline": "pelt",
+  "mock": false,
+  "mode": "spec"
+}

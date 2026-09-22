@@ -1,0 +1,10 @@
+{
+  "source_manifest_sha256": "6fd9dea17d7927ced70e29c36b0cfe6680779f9dc8945f143ce655a7fb0a6a90",
+  "ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "boundary_convention": "0-based index of first observation of new segment",
+  "train_labels_removed": true
+}

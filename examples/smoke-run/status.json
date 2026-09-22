@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "best_trial": 0,
+  "validation_f1": 1.0,
+  "trials": 8,
+  "valid_trials": 8,
+  "trial_success_rate": 1.0,
+  "first_attempt_success_rate": 1.0,
+  "mock": true
+}

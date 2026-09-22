@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EvoTS experiment report</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:0 20px;color:#18313e;background:#f5f8fa}h1{font-size:30px}section{background:white;padding:22px;margin:18px 0;border-radius:12px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:9px;text-align:left;border-bottom:1px solid #ddd}pre{white-space:pre-wrap;overflow-wrap:anywhere}img{width:100%}.banner{background:#fff0c8;padding:14px}</style>
+    <h1>EvoTS experiment report</h1><p class="banner">MOCK RUN — infrastructure demonstration; no LLM evidence</p>
+    <section><h2>Search</h2><pre>{
+  &quot;complete&quot;: true,
+  &quot;best_trial&quot;: 0,
+  &quot;validation_f1&quot;: 1.0,
+  &quot;trials&quot;: 8,
+  &quot;valid_trials&quot;: 8,
+  &quot;trial_success_rate&quot;: 1.0,
+  &quot;first_attempt_success_rate&quot;: 1.0,
+  &quot;mock&quot;: true
+}</pre><img src="search.png" alt="Validation search progress"></section>
+    <section><h2>Held-out test</h2><pre>{
+  &quot;aggregate&quot;: {
+    &quot;f1&quot;: 1.0,
+    &quot;precision&quot;: 1.0,
+    &quot;recall&quot;: 1.0,
+    &quot;hausdorff_infinite&quot;: false,
+    &quot;hausdorff&quot;: 0.0,
+    &quot;n_sequences&quot;: 2
+  },
+  &quot;per_series&quot;: [
+    {
+      &quot;name&quot;: &quot;mean_variance_0&quot;,
+      &quot;f1&quot;: 1.0,
+      &quot;precision&quot;: 1.0,
+      &quot;recall&quot;: 1.0,
+      &quot;hausdorff&quot;: 0.0,
+      &quot;hausdorff_infinite&quot;: false,
+      &quot;tp&quot;: 2,
+      &quot;fp&quot;: 0,
+      &quot;fn&quot;: 0,
+      &quot;matches&quot;: [
+        [
+          100,
+          100
+        ],
+        [
+          200,
+          200
+        ]
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;mean_variance_1&quot;,
+      &quot;f1&quot;: 1.0,
+      &quot;precision&quot;: 1.0,
+      &quot;recall&quot;: 1.0,
+      &quot;hausdorff&quot;: 0.0,
+      &quot;hausdorff_infinite&quot;: false,
+      &quot;tp&quot;: 2,
+      &quot;fp&quot;: 0,
+      &quot;fn&quot;: 0,
+      &quot;matches&quot;: [
+        [
+          100,
+          100
+        ],
+        [
+          200,
+          200
+        ]
+      ]
+    }
+  ]
+}</pre></section>
+    <section><h2>API accounting</h2><pre>{
+  &quot;reported_cost_usd&quot;: 0,
+  &quot;mode&quot;: &quot;no API calls&quot;
+}</pre></section>
+    <section><h2>Trajectory history</h2><table><tr><th>Trial</th><th>Operator</th><th>Model</th><th>F1</th><th>Accepted</th><th>Stagnant</th><th>Parents</th></tr><tr><td>0</td><td>initial</td><td>pelt</td><td>1.0</td><td>True</td><td>False</td><td>[]</td></tr><tr><td>1</td><td>revision</td><td>pelt</td><td>1.0</td><td>False</td><td>True</td><td>[0]</td></tr><tr><td>2</td><td>initial</td><td>bottom_up</td><td>1.0</td><td>False</td><td>False</td><td>[]</td></tr><tr><td>3</td><td>revision</td><td>bottom_up</td><td>1.0</td><td>False</td><td>True</td><td>[2]</td></tr><tr><td>4</td><td>alternative</td><td>window</td><td>1.0</td><td>False</td><td>False</td><td>[0, 1]</td></tr><tr><td>5</td><td>revision</td><td>pelt</td><td>1.0</td><td>False</td><td>True</td><td>[0]</td></tr><tr><td>6</td><td>alternative</td><td>window</td><td>1.0</td><td>False</td><td>False</td><td>[0, 5]</td></tr><tr><td>7</td><td>recombine</td><td>ensemble</td><td>1.0</td><td>False</td><td>False</td><td>[0, 1]</td></tr></table></section>
+    <p>Scores are computed outside candidate execution. Primary selection uses validation F1 only. Training and test annotation access is excluded from the planner.</p></html>

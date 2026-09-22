@@ -1,0 +1,16 @@
+{
+  "id": 0,
+  "validation_f1": 0.43653198653198655,
+  "candidate": {
+    "model": "pelt",
+    "pipeline": {
+      "model": "pelt"
+    },
+    "summary": "pelt",
+    "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+  },
+  "candidate_sha256": "e2f2b5bf652c1652f402e7e72aa3f7e3e3257c9ea37defa76dbcee19a9822965",
+  "seed": 42,
+  "mode": "spec",
+  "mock": false
+}

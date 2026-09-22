@@ -1,0 +1,33 @@
+{
+  "sample_id": "mean_variance_0",
+  "source_split": "train",
+  "sample_index": 0,
+  "n_series": 2,
+  "features": {
+    "length": 900,
+    "dimensions": 1,
+    "missing_ratio": 0.0,
+    "window": 25,
+    "lag1_autocorrelation": [
+      0.7755960613167714
+    ],
+    "trend_strength": [
+      7.93845406937832e-05
+    ],
+    "spectral_concentration": [
+      0.3020817253668436
+    ],
+    "dominant_period_samples": [
+      225.0
+    ],
+    "local_mean_discrepancy_max": [
+      2.0648250535844803
+    ],
+    "local_std_discrepancy_max": [
+      0.9299384276406177
+    ],
+    "nonstationarity_proxy": [
+      0.016252863427855934
+    ]
+  }
+}

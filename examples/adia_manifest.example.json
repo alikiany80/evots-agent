@@ -1,0 +1,4 @@
+[
+  {"file": "asset_episode_001.csv", "value_column": "value", "break_index": 450},
+  {"file": "asset_episode_002.csv", "value_column": "value", "break_index": 510}
+]

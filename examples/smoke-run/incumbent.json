@@ -1,0 +1,12 @@
+{
+  "id": 0,
+  "q": 1.0,
+  "candidate": {
+    "model": "pelt",
+    "summary": "MOCK: initial",
+    "pipeline": {
+      "model": "pelt"
+    },
+    "code": "from evots.bank import detect as bank_detect\nSPEC = {'model': 'pelt'}\n\ndef detect(train, x, seed):\n    return bank_detect(train, x, SPEC, seed)\n"
+  }
+}
